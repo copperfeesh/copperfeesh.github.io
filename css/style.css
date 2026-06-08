@@ -225,6 +225,30 @@ body {
   margin-bottom: 24px;
 }
 
+code {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  background-color: #eee;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+pre {
+  background-color: #111;
+  color: #eee;
+  padding: 1.5rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  color: inherit;
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 40px;

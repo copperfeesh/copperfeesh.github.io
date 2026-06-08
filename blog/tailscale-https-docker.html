@@ -36,6 +36,19 @@
                 <div class="post-body">
                     <p>I have been using Tailscale to access various Docker containers and services on my UGREEN DXP 4800 Plus using plain HTTP because I didn't feel like managing reverse proxies and certificates. This is fine as I'm managing the environments and the Tailscale but more and more certain apps expect HTTPS.</p>
                     <p>With a bit of digging I discovered Tailscale certificates and serve.</p>
+                    
+                    <p>In order to enable, go to the Tailscale admin console in a browser. Then choose DNS in the top menu and enable "MagicDNS" and "HTTPS Certificates". Also copy your "Tailnet DNS name" at the top of the page.</p>
+                    
+                    <p>Then enable SSH on your NAS and SSH in and <code>su -</code> to a root prompt. Then enter the following command to enable the certs:</p>
+                    <pre><code>sudo tailscale cert [your-tailscale-dns].ts.net</code></pre>
+                    
+                    <p>You can use <code>tailscale serve</code> to enable services. For my setup, I'm running all containers off the same IP using different ports. For each service, you can enter a command like this (replacing 8000 with your specific port):</p>
+                    <pre><code>sudo tailscale serve --bg --https=8000 http://localhost:8000</code></pre>
+                    
+                    <p>If you make a mistake, you can clear the setup with:</p>
+                    <pre><code>sudo tailscale serve reset</code></pre>
+                    
+                    <p>If it works, you can access your services at <code>https://[your-tailscale-dns].ts.net:[your-port]</code>. This helps with apps and services that require HTTPS URLs.</p>
                 </div>
             </article>
         </main>

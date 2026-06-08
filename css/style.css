@@ -207,3 +207,32 @@ body {
 .submit-btn:hover {
   opacity: 0.9;
 }
+
+.post-content {
+  max-width: 650px;
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+.post-body {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.post-body p {
+  margin-bottom: 24px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: var(--text-primary);
+}

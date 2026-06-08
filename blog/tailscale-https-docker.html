@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garron Stevenson</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>HTTPS for a self-hosted server using Tailscale and Docker | Garron Stevenson</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="layout">
         <aside class="sidebar">
-            <h1 class="branding"><a href="index.html">Garron Stevenson</a></h1>
+            <h1 class="branding"><a href="../index.html">Garron Stevenson</a></h1>
             <nav class="nav">
-                <a href="index.html" class="nav-link active">Blog</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="../index.html" class="nav-link active">Blog</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
             </nav>
             <div class="social-links">
                 <a href="https://github.com/copperfeesh" title="GitHub">
@@ -27,14 +27,17 @@
             </div>
         </aside>
         <main class="content">
-            <div class="posts">
-                <article class="post-item">
+            <article class="post-content">
+                <a href="../index.html" class="back-link">← Back to Blog</a>
+                <header class="post-header">
                     <time class="post-date">June 8, 2026</time>
-                    <h2 class="post-title"><a href="blog/tailscale-https-docker.html">HTTPS for a self-hosted server using Tailscale and Docker</a></h2>
-                    <p class="post-excerpt">I have been using Tailscale to access various Docker containers and services on my UGREEN DXP 4800 Plus using plain HTTP because I didn't feel like managing reverse proxies and certificates...</p>
-                    <a href="blog/tailscale-https-docker.html" class="read-more">Read More</a>
-                </article>
-            </div>
+                    <h1 class="post-title">HTTPS for a self-hosted server using Tailscale and Docker</h1>
+                </header>
+                <div class="post-body">
+                    <p>I have been using Tailscale to access various Docker containers and services on my UGREEN DXP 4800 Plus using plain HTTP because I didn't feel like managing reverse proxies and certificates. This is fine as I'm managing the environments and the Tailscale but more and more certain apps expect HTTPS.</p>
+                    <p>With a bit of digging I discovered Tailscale certificates and serve.</p>
+                </div>
+            </article>
         </main>
     </div>
 </body>

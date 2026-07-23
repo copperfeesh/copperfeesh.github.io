@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTTPS for a self-hosted server using Tailscale and Docker | Garron Stevenson</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 </head>
 <body>
     <div class="layout">
@@ -40,18 +41,20 @@
                     <p>In order to enable, go to the Tailscale admin console in a browser. Then choose DNS in the top menu and enable "MagicDNS" and "HTTPS Certificates". Also copy your "Tailnet DNS name" at the top of the page.</p>
                     
                     <p>Then enable SSH on your NAS and SSH in and <code>su -</code> to a root prompt. Then enter the following command to enable the certs:</p>
-                    <pre><code>sudo tailscale cert [your-tailscale-dns].ts.net</code></pre>
+                    <pre><code class="language-bash">sudo tailscale cert [your-tailscale-dns].ts.net</code></pre>
                     
                     <p>You can use <code>tailscale serve</code> to enable services. For my setup, I'm running all containers off the same IP using different ports. For each service, you can enter a command like this (replacing 8000 with your specific port):</p>
-                    <pre><code>sudo tailscale serve --bg --https=8000 http://localhost:8000</code></pre>
+                    <pre><code class="language-bash">sudo tailscale serve --bg --https=8000 http://localhost:8000</code></pre>
                     
                     <p>If you make a mistake, you can clear the setup with:</p>
-                    <pre><code>sudo tailscale serve reset</code></pre>
+                    <pre><code class="language-bash">sudo tailscale serve reset</code></pre>
                     
                     <p>If it works, you can access your services at <code>https://[your-tailscale-dns].ts.net:[your-port]</code>. This helps with apps and services that require HTTPS URLs.</p>
                 </div>
             </article>
         </main>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>

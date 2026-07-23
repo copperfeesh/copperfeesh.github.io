@@ -228,25 +228,27 @@ body {
 code {
   font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   background-color: #eee;
+  color: var(--text-primary);
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 0.9em;
 }
 
 pre {
-  background-color: #111;
-  color: #eee;
-  padding: 1.5rem;
-  border-radius: 4px;
+  background-color: #0d1117;
+  color: #e6edf3;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
   overflow-x: auto;
   margin-bottom: 24px;
 }
 
-pre code {
+pre code, pre code.hljs {
   background-color: transparent;
-  padding: 0;
+  padding: 1.25rem 1.5rem;
   border-radius: 0;
   color: inherit;
+  display: block;
 }
 
 .back-link {

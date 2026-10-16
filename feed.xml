@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Garron Stevenson</title>
+    <link>https://copperfish.net/</link>
+    <description>Personal blog and technical notes by Garron Stevenson on self-hosting, homelab, and software engineering.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Oct 2026 09:55:33 +0000</lastBuildDate>
+    <atom:link href="https://copperfish.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>HTTPS for a self-hosted server using Tailscale and Docker</title>
+      <link>https://copperfish.net/blog/tailscale-https-docker.html</link>
+      <guid>https://copperfish.net/blog/tailscale-https-docker.html</guid>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[I have been using Tailscale to access various Docker containers and services on my UGREEN DXP 4800 Plus using plain HTTP because I didn't feel like managing reverse proxies and certificates...]]></description>
+    </item>
+  </channel>
+</rss>

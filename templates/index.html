@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garron Stevenson</title>
+    <meta name="description" content="Personal blog and technical notes by Garron Stevenson on self-hosting, homelab, and software engineering.">
+    <meta name="author" content="Garron Stevenson">
+    <link rel="canonical" href="https://copperfish.net/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Garron Stevenson">
+    <meta property="og:url" content="https://copperfish.net/">
+    <meta property="og:title" content="Garron Stevenson">
+    <meta property="og:description" content="Personal blog and technical notes by Garron Stevenson on self-hosting, homelab, and software engineering.">
+    <meta property="og:image" content="https://copperfish.net/assets/favicon.svg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Garron Stevenson">
+    <meta name="twitter:description" content="Personal blog and technical notes by Garron Stevenson on self-hosting, homelab, and software engineering.">
+    <meta name="twitter:image" content="https://copperfish.net/assets/favicon.svg">
+
+    <!-- Favicon & Feed -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Garron Stevenson (RSS Feed)" href="feed.xml">
+
+    <!-- Prevent Theme Flash -->
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="layout">
+        {{sidebar}}
+        <main class="content">
+            <div class="posts">
+                {{posts_list}}
+            </div>
+        </main>
+    </div>
+    <script src="assets/theme.js"></script>
+</body>
+</html>
